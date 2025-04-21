@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #2b69d1;
+    --light-bg: #f4f6f9;
+    --card-bg: #ffffff;
+    --card-name: #1b58a6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease;
+  }
+  
+  .bestsellers {
+    background: var(--light-bg);
+    padding: 60px 20px;
+  }
+  
+  .bestsellers__header {
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    text-align: center;
+  }
+  
+  .bestsellers__title {
+    text-align: left;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0;
+  }
+  
+  .bestsellers__slider {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .product-card {
+    background: #ebf1f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow-color);
+  }
+  
+  .product-card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .product-card__info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .product-card__name {
+    font-size: 1rem;
+    color: var(--card-name);
+    margin: 0;
+  }
+  
+  .product-card__price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .product-card__btn {
+    margin-top: auto;
+    padding: 10px;
+    background: #dfe7f2;
+    color: #1b58a6;
+    border: none;
+    border-radius: 32px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+  }
+  
+  .product-card__btn:hover {
+    color: #e8571e;
+    background: #f5d5c7;
+    transform: translateY(-2px);
+  }
