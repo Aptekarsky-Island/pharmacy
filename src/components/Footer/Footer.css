@@ -1,0 +1,140 @@
+:root {
+    --footer-bg: #e9eef6;
+    --footer-radius: 16px;
+    --footer-text: #33475b;
+    --footer-link: #2b69d1;
+    --footer-muted: #6b7c93;
+    --footer-disclaimer: #a0aec0;
+    --footer-separator: rgba(51,71,91,0.1);
+  }
+  
+  .footer {
+    background: var(--footer-bg);
+    border-radius: var(--footer-radius);
+    padding: 24px;
+  }
+  
+  .footer__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .footer__branding {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .footer__logo {
+    font-size: 1.25rem;
+    color: var(--footer-text);
+    margin: 0;
+  }
+  
+  .footer__logo--accent {
+    color: var(--footer-link);
+  }
+  
+  .footer__phone {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 2px solid var(--footer-link);
+    border-radius: 8px;
+    color: var(--footer-link);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .footer__hours {
+    font-size: 0.875rem;
+    color: var(--footer-muted);
+  }
+  
+  .footer__links {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .footer__col h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: var(--footer-text);
+  }
+  
+  .footer__col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .footer__col a {
+    font-size: 0.875rem;
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .footer__col a:hover {
+    color: var(--footer-link);
+  }
+  
+  .footer__bottom {
+    border-top: 1px solid var(--footer-separator);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .footer__disclaimer {
+    font-size: 0.75rem;
+    color: var(--footer-disclaimer);
+    margin: 0;
+  }
+  
+  .footer__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .footer__icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--footer-link);
+  }
+  
+  .footer__copyright {
+    font-size: 0.875rem;
+    color: var(--footer-muted);
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .footer__top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer__links {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer__bottom {
+      align-items: center;
+    }
+  }

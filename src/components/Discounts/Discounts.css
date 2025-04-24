@@ -1,0 +1,113 @@
+:root {
+    --discount-bg: #f4f6f9;
+    --discount-accent: #e8571e;
+    --discount-gradient: linear-gradient(135deg, #ffc371 0%, #ff5f6d 100%);
+    --transition: 0.3s ease;
+  }
+  
+  .discounts {
+    padding: 60px 20px;
+    background: var(--discount-bg);
+  }
+  
+  .discounts__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .discounts__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .discounts__icon {
+    font-size: 48px;
+    color: var(--discount-accent);
+    flex-shrink: 0;
+  }
+  
+  .discounts__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .discounts__title {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .discounts__desc {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .discounts__highlight {
+    background: var(--discount-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  
+  .discounts__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: var(--discount-gradient);
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform var(--transition);
+  }
+  
+  .discounts__btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .discounts__graphic {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .discounts__circle {
+    width: 180px;
+    height: 180px;
+    background: var(--discount-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition);
+  }
+  
+  .discounts__circle:hover {
+    transform: scale(1.05);
+  }
+  
+  .discounts__percent-icon {
+    font-size: 64px;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .discounts__inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .discounts__info {
+      justify-content: center;
+    }
+  }
+  
