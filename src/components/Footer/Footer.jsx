@@ -1,6 +1,7 @@
 import React from 'react';
-import './Footer.css';
+
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
           <div className="footer__col">
             <h3>Помощь</h3>
             <ul>
-              <li><a href="#">Оплата</a></li>
+              <li><Link to="/payment">Оплата</Link></li> 
               <li><a href="#">Обмен и возврат</a></li>
             </ul>
           </div>
