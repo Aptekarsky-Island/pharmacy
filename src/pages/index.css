@@ -5,4 +5,21 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  background: #f4f6f9;
+}
+
+:root {
+  --header-bg: #f4f6f9;
+  --primary-color: #345278;
+  --accent-color: #e8571e;
+  --text-color: #333333;
+  --promo-gradient: #ffffff;
+  --promo-light: #fff;
+  --promo-text: #f4f4f4;
+  --promo-btn-bg: #fff;
+  --promo-btn-color: #345278;
+  --transition: 0.3s ease;
+  --border-radius-main: 30px;
+  --border-radius-large: 48px;
+  --max-width-main: 1280px;
 }
