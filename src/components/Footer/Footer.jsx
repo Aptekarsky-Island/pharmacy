@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MainLogo from '../MainLogo/MainLogo';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className='footer'>
       <div className="footer__container">
         <h2 className="footer__logo">
-          АПТЕКАРСКИЙ <span className="footer__logo--accent">ОСТРОВ</span>
+        <MainLogo width={250} height={30}></MainLogo>
         </h2>
         <div className="footer__inner">
           <div className="footer__info">
