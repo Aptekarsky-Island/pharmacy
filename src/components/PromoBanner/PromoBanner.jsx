@@ -2,7 +2,7 @@ import React from 'react';
 import './PromoBanner.css';
 import MapImage from '../../assets/map.png';
 
-export default function PromoBanner() {
+export default function PromoBanner({ onSearchClick }) {
   return (
     <section className="promo">
       <div className="promo__inner">

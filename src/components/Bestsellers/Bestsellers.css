@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../../fonts/Nunito-Regular.ttf');
+}
+
 :root {
     --primary-color: #2b69d1;
     --light-bg: #f4f6f9;
@@ -8,82 +13,245 @@
   }
   
   .bestsellers {
-    background: var(--light-bg);
-    padding: 60px 20px;
+    border-radius: 30px;
+    max-width: 1276px;
+    margin: 24px auto;
+    padding: 40px 0;
   }
   
   .bestsellers__header {
-    max-width: 1280px;
-    margin: 0 auto 24px;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 24px auto;
+    text-align: left;
   }
   
   .bestsellers__title {
-    text-align: left;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #3a5ba7;
+    font-weight: 700;
     margin: 0;
+    letter-spacing: 0.5px;
   }
   
   .bestsellers__slider {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding-left: 60px;
+  }
+  
+  .bestsellers__scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .bestsellers__scroll {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-shrink: 0;
+    background: none;
+    user-select: none;
+    cursor: grab;
+  }
+  .bestsellers__scroll:active {
+    cursor: grabbing;
+  }
+  .bestsellers__scroll::-webkit-scrollbar {
+    height: 0;
+    background: transparent;
+  }
+  
+  .bestsellers__arrow {
+    background: #f4f6f9;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+    color: #3a5ba7;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    box-shadow: 0 2px 8px rgba(58,91,167,0.08);
+    transition: background 0.2s, color 0.2s;
+    z-index: 2;
+  }
+  .bestsellers__arrow:hover {
+    background: #e7ecf2;
+    color: #e8571e;
+  }
+  
+  .bestsellers__arrow:active {
+    background: #dfe7f2;
+  }
+  
+  @media (max-width: 1200px) {
+    .bestsellers__scroll-wrapper {
+      max-width: 100vw;
+    }
+    .bestsellers__scroll {
+      width: 100vw !important;
+      min-width: 0;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .bestsellers__header, .bestsellers__scroll-wrapper {
+      padding-left: 16px;
+    }
+    .bestsellers__scroll {
+      padding-left: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .bestsellers {
+      padding: 16px 0;
+      border-radius: 12px;
+    }
+    .bestsellers__title {
+      font-size: 1.3rem;
+    }
+    .product-card {
+      min-width: 200px;
+      max-width: 200px;
+      flex: 0 0 200px;
+    }
+    .bestsellers__arrow {
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+    }
   }
   
   .product-card {
-    background: #ebf1f8;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px var(--shadow-color);
+    min-width: 260px;
+    max-width: 260px;
+    flex: 0 0 260px;
+    background: #f4f6f9;
+    border-radius: 18px;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition: transform var(--transition), box-shadow var(--transition);
   }
   
   .product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--shadow-color);
+    /* box-shadow: 0 4px 24px rgba(58,91,167,0.08); */
+    background: #edf1f6;
   }
   
   .product-card__image {
     width: 100%;
     height: auto;
     object-fit: cover;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    border-radius: 18px;
   }
   
   .product-card__info {
-    padding: 16px;
+    font-family: 'Nunito';
+    padding: 0 16px 16px 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    align-items: flex-start;
   }
   
   .product-card__name {
     font-size: 1rem;
-    color: var(--card-name);
-    margin: 0;
+    color: #3a5ba7;
+    margin: 0 0 4px 0;
+    font-weight: 500;
   }
   
   .product-card__price {
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #3a5ba7;
+    margin-bottom: 8px;
   }
   
   .product-card__btn {
+    font-family: 'Nunito';
     margin-top: auto;
-    padding: 10px;
+    padding: 10px 0;
+    width: 100%;
     background: #dfe7f2;
-    color: #1b58a6;
+    color: #3a5ba7;
     border: none;
-    border-radius: 32px;
-    font-size: 0.9rem;
+    border-radius: 18px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background var(--transition), transform var(--transition);
+    transition: background 0.2s, color 0.2s;
   }
   
   .product-card__btn:hover {
-    color: #e8571e;
-    background: #f5d5c7;
-    transform: translateY(-2px);
+    background: #1b58a6;
+    color: #ffffff;
+  }
+
+  .bestsellers__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .bestsellers__dot {
+    display: inline-block;
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    background: #e7ecf2;
+    transition: background 0.2s, width 0.2s;
+  }
+  .bestsellers__dot--active {
+    background: #1b58a6 !important;
+    /* width: 36px; */
+  }
+
+  .bestsellers__swiper {
+    padding-bottom: 40px;
+  }
+
+  .swiper-pagination {
+    position: static !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 24px auto;
+    width: auto !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 48px !important;
+    height: 8px !important;
+    border-radius: 8px !important;
+    background: #e7ecf2;
+    opacity: 1;
+    margin: 0 !important;
+    transition: background 0.2s, width 0.2s;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #1b58a6 !important;
+    width: 64px !important;
+  }
+
+  @media (max-width: 900px) {
+    .swiper-pagination {
+      margin: 0 auto;
+    }
   }

@@ -1,27 +1,20 @@
 import React from 'react';
 import './Discounts.css';
-import { FaCalendarAlt, FaPercent } from 'react-icons/fa';
+import icon from '../../assets/icons/discountsLogo.svg';
 
 export default function Discounts() {
   return (
     <section className="discounts">
       <div className="discounts__inner">
         <div className="discounts__info">
-          <FaCalendarAlt className="discounts__icon" />
-          <div className="discounts__text">
-            <h2 className="discounts__title">Скидки выходного дня</h2>
-            <p className="discounts__desc">
-              Каждый <strong>суббота</strong> и <strong>воскресенье</strong> —<br />получи <span className="discounts__highlight">3% cashback</span> на все товары.
-            </p>
-            <a href="#discounts" className="discounts__btn">
-              Узнать больше <FaPercent />
-            </a>
+          <h2 className="discounts__title">СКИДКИ</h2>
+          <div className="discounts__subtitle">ВЫХОДНОГО ДНЯ</div>
+          <div className="discounts__desc">
+            Каждую <span className="discounts__strong">субботу</span> и <span className="discounts__strong">воскресенье</span> предоставляется <span className="discounts__badge">скидка 3%</span> <span className="discounts__blue">на все товары</span>, <span className="discounts__lightblue">не входящие в перечень жизненно важных лекарственных препаратов.</span>
           </div>
         </div>
         <div className="discounts__graphic">
-          <div className="discounts__circle">
-            <FaPercent className="discounts__percent-icon" />
-          </div>
+          <img src={icon} alt="Скидки выходного дня" className="discounts__svg" />
         </div>
       </div>
     </section>
