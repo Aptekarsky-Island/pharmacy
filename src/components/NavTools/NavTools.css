@@ -1,9 +1,9 @@
 .navtools {
-  position: fixed;
-  top: 80px;
+  position: absolute;
+  top: 148px;
   left: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,25 +11,22 @@
   box-shadow: none !important;
   border: none !important;
   pointer-events: none;
-  transform: translateY(0);
-  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
 }
 
-.navtools--hidden {
+/* .navtools--hidden {
   z-index: 2;
   transform: translateY(-100%);
-}
+} */
 
 .navtools__inner {
   width: 100%;
-  max-width: 1100px;
-  margin: 60px auto;
+  max-width: 1060px;
+  margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding-left: 60px;
-  padding-right: 60px; */
   pointer-events: auto;
+  padding: 10px 20px;
 }
 
 .navbar__menu,

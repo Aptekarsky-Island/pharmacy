@@ -7,35 +7,43 @@ const ALPHABETS = {
 };
 
 export default function AlphabetFilter() {
-  const [lang, setLang] = useState('rus');
-  const letters = ALPHABETS[lang];
+  const [lang, setLang] = useState(null);
+  const [showAlphabet, setShowAlphabet] = useState(false);
+  const letters = lang ? ALPHABETS[lang] : [];
+
+  const handleLangClick = (selectedLang) => {
+    setLang(selectedLang);
+    setShowAlphabet(true);
+  };
 
   return (
     <section className="alphabet">
       <div className="alphabet__header">
-        <h2 className="alphabet__title">Поиск по алфавиту</h2>
+        <h2 className="alphabet__title">ПРЕПАРАТЫ ПО АЛФАВИТУ</h2>
         <div className="alphabet__controls">
           <button
-            className={`alphabet__btn ${lang === 'rus' ? 'active' : ''}`}
-            onClick={() => setLang('rus')}
+            className={`alphabet__btn${lang === 'rus' ? ' active' : ''}`}
+            onClick={() => handleLangClick('rus')}
           >
             A–Я
           </button>
           <button
-            className={`alphabet__btn ${lang === 'eng' ? 'active' : ''}`}
-            onClick={() => setLang('eng')}
+            className={`alphabet__btn${lang === 'eng' ? ' active' : ''}`}
+            onClick={() => handleLangClick('eng')}
           >
             A–Z
           </button>
         </div>
       </div>
-      <div className="alphabet__grid">
-        {letters.map((l) => (
-          <button key={l} className="alphabet__letter">
-            {l}
-          </button>
-        ))}
-      </div>
+      {showAlphabet && lang && (
+        <div className="alphabet__grid">
+          {letters.map((l) => (
+            <button key={l} className="alphabet__letter">
+              {l}
+            </button>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

@@ -1,113 +1,160 @@
-:root {
+/* :root {
     --discount-bg: #f4f6f9;
     --discount-accent: #e8571e;
     --discount-gradient: linear-gradient(135deg, #ffc371 0%, #ff5f6d 100%);
     --transition: 0.3s ease;
-  }
+  } */
   
   .discounts {
-    padding: 60px 20px;
-    background: var(--discount-bg);
+    padding: 40px 0 40px 0;
+    background: #ffffff;
+    border-radius: 30px;
+    max-width: 1276px;
+    margin: 24px auto 24px auto;
   }
   
   .discounts__inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 64px;
   }
   
   .discounts__info {
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-  }
-  
-  .discounts__icon {
-    font-size: 48px;
-    color: var(--discount-accent);
-    flex-shrink: 0;
-  }
-  
-  .discounts__text {
+    max-width: 540px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 60px;
   }
   
   .discounts__title {
     font-size: 2rem;
-    color: #333;
-    margin: 0;
+    color: #3a5ba7;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.5px;
+    text-align: left;
+  }
+  
+  .discounts__subtitle {
+    font-size: 1.1rem;
+    color: #b0bed9;
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    text-align: left;
   }
   
   .discounts__desc {
     font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
+    color: #3a4a5a;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 0.5em;
   }
   
-  .discounts__highlight {
-    background: var(--discount-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+  .discounts__strong {
+    font-weight: 700;
+    color: #3a5ba7;
   }
   
-  .discounts__btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-    padding: 10px 20px;
-    background: var(--discount-gradient);
+  .discounts__blue {
+    color: #3a5ba7;
+    font-weight: 500;
+  }
+  
+  .discounts__lightblue {
+    color: #b0bed9;
+  }
+  
+  .discounts__badge {
+    display: inline-block;
+    background: #e8571e;
     color: #fff;
-    border-radius: 30px;
-    text-decoration: none;
+    border-radius: 8px;
+    padding: 2px 12px;
+    font-size: 1rem;
     font-weight: 600;
-    transition: transform var(--transition);
+    margin: 0 4px;
+    vertical-align: middle;
   }
   
-  .discounts__btn:hover {
-    transform: translateY(-2px);
+  .discounts__muted {
+    color: #b0bed9;
+    font-size: 0.95em;
   }
   
   .discounts__graphic {
+    flex: 1 1 0;
     display: flex;
-    justify-content: center;
-  }
-  
-  .discounts__circle {
-    width: 180px;
-    height: 180px;
-    background: var(--discount-gradient);
-    border-radius: 50%;
-    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transition: transform var(--transition);
+    min-width: 340px;
   }
   
-  .discounts__circle:hover {
-    transform: scale(1.05);
+  .discounts__svg {
+    max-width: 420px;
+    min-width: 340px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-right: 0;
   }
   
-  .discounts__percent-icon {
-    font-size: 64px;
-    color: #fff;
+  @media (max-width: 1100px) {
+    .discounts__info {
+      padding-left: 24px;
+    }
+    .discounts__svg {
+      max-width: 320px;
+      min-width: 180px;
+    }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+    .discounts {
+      max-width: 100%;
+      margin: 0 0 24px 0;
+      padding: 24px 0 24px 0;
+    }
     .discounts__inner {
-      grid-template-columns: 1fr;
-      text-align: center;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
     }
     .discounts__info {
+      padding-left: 0;
+    }
+    .discounts__graphic {
       justify-content: center;
+      width: 100%;
+      min-width: 0;
+    }
+    .discounts__svg {
+      max-width: 220px;
+      min-width: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .discounts {
+      padding: 12px 0 12px 0;
+      border-radius: 12px;
+    }
+    .discounts__title {
+      font-size: 1.3rem;
+    }
+    .discounts__subtitle {
+      font-size: 0.95rem;
+    }
+    .discounts__desc {
+      font-size: 0.95rem;
+    }
+    .discounts__svg {
+      max-width: 140px;
     }
   }
   
