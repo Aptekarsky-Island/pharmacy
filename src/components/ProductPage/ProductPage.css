@@ -1,0 +1,199 @@
+/* Добавляю стили для устранения проблемы с прокруткой */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Обеспечиваем правильную работу модальных окон на странице товара */
+.product-page {
+  position: relative; /* Для корректного позиционирования вложенных элементов */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.product-page-outer {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: 160px 0 28px 0;
+}
+
+.product-page-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 36px;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+  gap: 56px;
+  align-items: flex-start;
+}
+
+.product-page-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.product-page-thumbs {
+  display: flex;
+  z-index: 101;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-page-thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.product-page-thumb.active {
+  border-color: #1b58a6;
+}
+
+.product-page-main-image-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 240px;
+  min-height: 340px;
+  background: #fff;
+  border-radius: 18px;
+}
+
+.product-page-main-image {
+  width: 240px;
+  height: 340px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.product-page-info {
+  flex: 1;
+  min-width: 340px;
+}
+
+.product-page-tabs {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.product-page-tab {
+  background: none;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #1b58a6;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1.1rem;
+}
+
+.product-page-tab.active,
+.product-page-tab:focus {
+  background: #eaf1fa;
+  color: #1b58a6;
+}
+
+.product-page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.product-page-meta {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  margin-bottom: 24px;
+}
+
+.product-page-meta td {
+  font-size: 1rem;
+  padding: 0 0 0 0;
+  vertical-align: middle;
+}
+
+.product-page-meta .dotted {
+  width: 60%;
+  border-bottom: 1px dotted #bfcfe2;
+  position: relative;
+}
+
+.product-page-meta .dotted span {
+  position: relative;
+  left: 8px;
+  background: #fff;
+  padding-left: 8px;
+  color: #1b58a6;
+  font-weight: 500;
+}
+
+.product-page-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1b58a6;
+  margin-bottom: 18px;
+}
+
+.product-page-buy-btn {
+  background: #e8571e;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 14px 48px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.product-page-buy-btn:hover {
+  background: #ff6a36;
+}
+
+/* Стили для вкладок наверху */
+.product-page-tabs-container {
+  background: #f4f6f9;
+  border-radius: 8px 8px 0 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 32px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.product-page-tab {
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.product-page-tab.active {
+  background: #fff;
+  color: #4a89dc;
+  border-radius: 8px 8px 0 0;
+}
