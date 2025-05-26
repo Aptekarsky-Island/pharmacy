@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+// import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import { FaSearch, FaUser, FaShoppingCart, FaBars } from 'react-icons/fa';
 import SearchWindow from '../SearchWindow/SearchWindow';
@@ -7,27 +7,26 @@ import MainIcon from '../../assets/icons/categories_icons/mainIcon.svg?react';
 import MainLogo from '../MainLogo/MainLogo';
 
 export default function Header() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [showNavTools, setShowNavTools] = useState(true);
-  const lastScrollY = useRef(window.scrollY);
+  // const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // const lastScrollY = useRef(window.scrollY);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY.current && window.scrollY > 100) {
-        setShowNavTools(false);
-      } else {
-        setShowNavTools(true);
-      }
-      lastScrollY.current = window.scrollY;
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > lastScrollY.current && window.scrollY > 100) {
+  //       setShowNavTools(false);
+  //     } else {
+  //       setShowNavTools(true);
+  //     }
+  //     lastScrollY.current = window.scrollY;
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <div>
       <header className="header">
-        <SearchWindow isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+        {/* <SearchWindow isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} /> */}
         <div className="header__container">
           {/* Логотип и телефон */}
           <div className="header__top-row">
@@ -41,7 +40,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <NavTools onSearchClick={() => setIsSearchOpen(true)} hide={isSearchOpen} scrolledUp={showNavTools} />
+
     </div>
   );
 }
