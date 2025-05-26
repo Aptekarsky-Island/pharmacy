@@ -1,6 +1,6 @@
 .categories {
   flex: auto;
-  padding: 60px 20px;
+  padding: 30px 20px;
 }
 
 .categories__inner {
@@ -63,4 +63,11 @@
 .categories__icon-text {
   font-size: 24px;
   font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .categories {
+  padding: 20px 20px;
+}
 }
