@@ -7,6 +7,12 @@
   background: #f4f6f9;
 }
 
+/* Специальный стиль для хедера на странице товара */
+.product-page-header {
+  background: #e7ecf2 !important;
+  z-index: 102;
+}
+
 .header__container {
   max-width: var(--max-width-main);
   margin: 0 auto;

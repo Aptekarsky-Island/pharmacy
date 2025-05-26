@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Bestsellers.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
@@ -10,10 +11,10 @@ import p3 from '../../assets/p3.png';
 import p4 from '../../assets/p4.png';
 
 const baseProducts = [
-  { img: p1, name: 'Gls Витамины для волос капсулы 370мг 60шт', price: '480 ₽' },
-  { img: p2, name: 'Гэвкамен мазь для наружного применения туба', price: '129 ₽' },
-  { img: p3, name: 'Момат рино спрей назальный дозированный', price: '639 ₽' },
-  { img: p4, name: 'Масло эфирное лаванда 10мл', price: '229 ₽' }
+  { id: '1', img: p1, name: 'Gls Витамины для волос капсулы 370мг 60шт', price: '480 ₽' },
+  { id: '2', img: p2, name: 'Гэвкамен мазь для наружного применения туба', price: '129 ₽' },
+  { id: '3', img: p3, name: 'Момат рино спрей назальный дозированный', price: '639 ₽' },
+  { id: '4', img: p4, name: 'Масло эфирное лаванда 10мл', price: '229 ₽' }
 ];
 
 const products = Array(3).fill(baseProducts).flat();
@@ -33,16 +34,18 @@ export default function Bestsellers() {
           pagination={{ clickable: true }}
           className="bestsellers__swiper"
         >
-          {products.map(({ img, name, price }, index) => (
+          {products.map(({ id, img, name, price }, index) => (
             <SwiperSlide key={index}>
-              <div className="product-card">
-                <img src={img} alt={name} className="product-card__image" loading="lazy" />
-                <div className="product-card__info">
-                  <h3 className="product-card__name">{name}</h3>
-                  <span className="product-card__price">{price}</span>
-                  <button className="product-card__btn">Купить</button>
+              <Link to={`/product/${id}`} className="product-card__link">
+                <div className="product-card">
+                  <img src={img} alt={name} className="product-card__image" loading="lazy" />
+                  <div className="product-card__info">
+                    <h3 className="product-card__name">{name}</h3>
+                    <span className="product-card__price">{price}</span>
+                    <button className="product-card__btn">Купить</button>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

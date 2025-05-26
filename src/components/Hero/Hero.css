@@ -1,7 +1,7 @@
 .hero {
   max-width: var(--max-width-main);
   margin: 0 auto;
-  padding: 58px 20px;
+  padding: 78px 20px;
 }
 
 /* Новый контейнер с границей для всех элементов */
