@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import PagesLayout from './components/PagesLayout/PagesLayout';
 import Home from './pages/Home';
 import PaymentPage from './pages/PaymentPage';
+import ProductPage from './pages/ProductPage';
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,16 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <PaymentPage />
+      }
+    ]
+  },
+  {
+    path: '/product/:id', // добавить маршрут товара
+    element: <PagesLayout />,
+    children: [
+      {
+        index: true,
+        element: <ProductPage />
       }
     ]
   }

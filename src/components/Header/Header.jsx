@@ -5,6 +5,7 @@ import SearchWindow from '../SearchWindow/SearchWindow';
 import NavTools from '../NavTools/NavTools';
 import MainIcon from '../../assets/icons/categories_icons/mainIcon.svg?react';
 import MainLogo from '../MainLogo/MainLogo';
+import { useLocation } from 'react-router-dom';
 
 export default function Header() {
   // const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -40,7 +41,6 @@ export default function Header() {
           </div>
         </div>
       </header>
-
     </div>
   );
 }

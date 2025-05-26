@@ -1,0 +1,73 @@
+/* Контейнер для NavTools на странице товара */
+.product-page-navtools-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 0 24px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 16px 16px;
+}
+
+/* Переопределяем базовые стили NavTools для страницы товара */
+.product-page .navtools {
+  position: absolute;
+  top: 72px;
+  left: auto;
+  right: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+}
+
+.product-page .navtools__inner {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 26px 56px;
+}
+
+/* Стили для кнопок на странице товара */
+.product-page .navtools__search-btn {
+  background: #ffffff;
+}
+
+/* Убираем скрытие при скролле */
+.product-page .navtools--hidden {
+  transform: none;
+}
+
+/* Альтернативные стили для NavTools на странице товара */
+.product-page .nav-tools {
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  width: 100%;
+  margin-bottom: 24px;
+  box-shadow: none;
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+  transform: none;
+  transition: none;
+}
+
+/* Убираем анимацию скрытия при скролле для страницы товара */
+.product-page .nav-tools.hide {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Переопределяем стили для контейнера, чтобы он соответствовал странице товара */
+.product-page .nav-tools__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+/* Подстраиваем отступы для соответствия дизайну страницы товара */
+.product-page .nav-tools__search-btn,
+.product-page .nav-tools__user-btn,
+.product-page .nav-tools__cart-btn {
+  margin: 0 10px;
+} 
