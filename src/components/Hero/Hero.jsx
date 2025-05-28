@@ -1,7 +1,7 @@
-import React from 'react';
 import './Hero.css';
-import PromoBanner from '../PromoBanner/PromoBanner';
-import Categories from '../Categories/Categories';
+
+import PromoBanner from '@components/PromoBanner/PromoBanner';
+import Categories from '@components/Categories/Categories';
 import NavTools from '@components/NavTools/NavTools';
 
 export default function Hero() {
@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__box">
         <div className="hero__content">
-          <NavTools />
+          <NavTools/>
           <PromoBanner />
           <Categories />
         </div>

@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 3;
   background: #f4f6f9;
 }
 
@@ -11,13 +11,14 @@
   max-width: var(--max-width-main);
   margin: 0 auto;
   padding: 20px 32px 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 .header__top-row {
-  display: flex;
   max-height: 30px;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .mainLogo {

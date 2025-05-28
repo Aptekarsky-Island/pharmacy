@@ -1,31 +1,34 @@
-@font-face {
-    font-family: 'Nunito';
-    src: url('../../fonts/Nunito-Regular.ttf');
-  }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  transform: scale(0);
+}
 
-.search-window__overlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* flex уже не нужен */
-  }
-  
-.search-window__content {
-    position: absolute;
-    top: 71px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background-color: #fff;
-    border-radius: 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    overflow: auto; /* если контента станет много */
-  }
+.modal.active {
+  transform: scale(1);
+}
 
-.search-window__block{
-    display: flex;
-    flex-direction: column;
-    padding: 50px 135px 0px;
+.modal__content {
+  position: absolute;
+  top: 71px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+
+.modal__search__block {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 135px 0px;
 }
 
 .search-window__searchbar{
@@ -45,7 +48,6 @@
     font-family: Nunito;
     font-weight: 500;
     color: #222;
-    
 }
 
 .search-window__input::placeholder {
@@ -68,7 +70,7 @@
     align-self: center;
     background-color: #F4F6F9;
     background-position: center;
-    background-image: url('../../assets/icons/searchbar_icons/TextDeleteBtn.svg');
+    background-image: url('@assets/icons/searchbar_icons/TextDeleteBtn.svg');
     width: 12px;
     height: 12px;
 }
