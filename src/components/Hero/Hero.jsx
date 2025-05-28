@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__box">
         <div className="hero__content">
-          <NavTools />
+          <NavTools/>
           <PromoBanner />
           <Categories />
         </div>

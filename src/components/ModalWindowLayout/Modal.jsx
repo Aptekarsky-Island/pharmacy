@@ -3,29 +3,9 @@ import './Modal.css';
 import lupa from '@assets/icons/searchbar_icons/Lupa.svg';
 
 export default function Modal({ isOpen, setOpen, children }) {
-  // const handleEscapeKey = (e) => {
-  //   if (e.key === 'Escape') {
-  //     setOpen();
-  //   }
-  // };
-
-  // const handleOverlayClick = (e) => {
-  //   if (e.target === e.currentTarget) {
-  //     setOpen();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   document.addEventListener('keydown', handleEscapeKey);
-  //   return () => {
-  //     document.removeEventListener('keydown', handleEscapeKey);
-  //   };
-  // }, []);
-
-
   return (
-    <div className="modal" /* onClick={handleOverlayClick} */>
-      <div className="modal__content" /*onClick={(e) => e.stopPropagation()} */>
+    <div className={isOpen ? "modal active" : "modal"} onClick={() => setOpen(false)}>
+      <div className="modal__content" onClick={e => e.stopPropagation()}>
         <div className="modal__search__block">
           <div className="search-window__searchbar">
             <img className="search-window__lupa" src={lupa} alt="lupa" />

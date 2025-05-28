@@ -4,13 +4,11 @@ import { Outlet } from 'react-router-dom';
 
 function PagesLayout() {
   return (
-    <div className="page">
-      <main className="page__layout">
-        <Header />
-        <Outlet />
-        <Footer />
-      </main>
-    </div>
+    <main className="page__layout">
+      <Header />
+      <Outlet />
+      <Footer />
+    </main>
   );
 }
 

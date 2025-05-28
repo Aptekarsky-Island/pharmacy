@@ -2,6 +2,7 @@
   max-width: var(--max-width-main);
   margin: 0 auto;
   padding: 70px 20px;
+  
 }
 
 .hero__box {
@@ -13,9 +14,9 @@
 .hero__content {
   display: flex;
   flex-direction: column;
-  
   background: #fff;
   padding: 24px 20px;
+  position: relative;
 }
 
 @media (max-width: 960px) {
@@ -25,6 +26,6 @@
   }
   .hero__content {
     padding: 14px;
-    position: relative;
+    
   }
 }

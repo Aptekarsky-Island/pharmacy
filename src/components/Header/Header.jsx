@@ -15,7 +15,7 @@ export default function Header() {
         </div>
         <a href="tel:89119271787" className="header__phone">
           <span className="header__phone-text">8 (911) 927-17-87</span>
-          <TelePhone className="header__phone-icon" />
+          {/* <TelePhone className="header__phone-icon" /> */}
         </a>
       </div>
     </header>
