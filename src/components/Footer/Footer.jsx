@@ -2,6 +2,7 @@ import React from 'react';
 import MainLogo from '../MainLogo/MainLogo';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import '../Footer/Footer.css'
 
 export default function Footer() {
   return (

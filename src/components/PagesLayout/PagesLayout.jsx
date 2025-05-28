@@ -1,16 +1,15 @@
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { Outlet } from 'react-router-dom';
-import '../Footer/Footer.css'
 
 function PagesLayout() {
   return (
     <div className="page">
-      <Header />
-      <main className="footer__page__content">
+      <main className="page__layout">
+        <Header />
         <Outlet />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 }

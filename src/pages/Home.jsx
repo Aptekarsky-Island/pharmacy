@@ -1,19 +1,21 @@
 import './index.css'
-
-import Header from '../components/Header/Header';
+import { useState } from 'react';
 import Hero from '../components/Hero/Hero';
 import Bestsellers from '../components/Bestsellers/Bestsellers';
 import Discounts from '../components/Discounts/Discounts';
 import AlphabetFilter from '../components/AlphabetFilter/AlphabetFilter';
-import FooterPageLayout from '../components/PagesLayout/PagesLayout';
+import Modal from '../components/ModalWindowLayout/Modal';
 
 function Home() {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <>
       <Hero />
       <Bestsellers />
       <Discounts />
       <AlphabetFilter />
+      {/* <Modal isOpen={isOpen} setOpen={setOpen}/> */}
     </>
   );
 }
