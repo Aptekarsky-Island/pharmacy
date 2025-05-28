@@ -9,7 +9,7 @@
 
 
 .navtools__inner {
-  width: 100%;
+  width: 90%;
   max-width: 1060px;
   margin: 20px auto;
   display: flex;
@@ -57,7 +57,7 @@
   line-height: 1;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 960px) {
   .navtools {
     position: static;
     top: auto;
@@ -67,14 +67,9 @@
   }
   .navtools__inner {
     max-height: 47px;
-    width: 100%;
+    width: 90%;
     margin: 0;
-    padding: 20px;
+    padding: 24px;
   }
   
-}
-
-.navbar__menu-icon {
-  width: 32px;
-  height: 32px;
 }

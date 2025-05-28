@@ -32,13 +32,19 @@
   padding: 4px 8px;
   border-radius: 4px;
   transition: background var(--transition);
+  display: flex;
+  align-items: center;
 }
 
+.header__phone-icon {
+  display: none;
+  width: 18px;
+  height: 18px;
+}
 
 .header__icon:hover {
   color: var(--primary-color);
 }
-
 
 .header__cart:hover {
   background: #ff6a36;
@@ -48,7 +54,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 960px) {
   .header__container{
     max-height: 30px;
     padding: 60px 0px 10px 0px;
@@ -60,6 +66,17 @@
     display: block;
   }
   .header__top-row {
-  align-items:end;
+    justify-content: space-between;
+  }
+  .header__phone-text {
+    display: none;
+  }
+  
+  .header__phone-icon {
+    display: block;
+  }
+  
+  .header__phone {
+    margin-right: 42px;
   }
 }

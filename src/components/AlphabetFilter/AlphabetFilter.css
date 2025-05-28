@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   
   .alphabet__header {
@@ -54,26 +55,33 @@
   }
   
   .alphabet__grid {
+    width: 94%;
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     gap: 12px;
     justify-items: center;
   }
   
   .alphabet__letter {
-    padding: 12px 20px;
+    width: 100%;
+    max-width: 50px;
+    min-width: 30px;
+    padding: 12px 0;
     background: #e7ecf2;
     border: none;
     border-radius: 12px;
     font-family: 'Nunito';
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 3vw, 1rem);
     font-weight: 400;
     color: #222;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
     box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .alphabet__letter:hover {
@@ -81,33 +89,18 @@
     color: #222;
   }
 
-  @media (max-width: 1300px) {
-    .alphabet__grid {
-      max-width: 1280px;
+  @media (max-width: 500px) {
+    .alphabet {
+      padding: 40px 10px;
     }
-  }
-
-  @media (max-width: 1119px) {
+    
     .alphabet__grid {
-      max-width: 1060px;
+      gap: 8px;
     }
-  }
-
-  @media (max-width: 880px) {
-    .alphabet__grid {
-      max-width: 784px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .alphabet__grid {
-      max-width: 527px;
-    }
-  }
-
-  @media (max-width: 401px) {
-    .alphabet__grid {
-      max-width: 401px;
+    
+    .alphabet__btn {
+      padding: 10px 20px;
+      font-size: 1rem;
     }
   }
 
