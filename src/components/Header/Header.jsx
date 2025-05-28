@@ -4,6 +4,7 @@ import { FaSearch, FaUser, FaShoppingCart, FaBars } from 'react-icons/fa';
 import SearchWindow from '../SearchWindow/SearchWindow';
 import NavTools from '../NavTools/NavTools';
 import MainIcon from '../../assets/icons/categories_icons/mainIcon.svg?react';
+import TelePhone from '@assets/icons/telePhone.svg?react';
 import MainLogo from '../MainLogo/MainLogo';
 import { useLocation } from 'react-router-dom';
 
@@ -37,7 +38,10 @@ export default function Header() {
                 <MainLogo width={300} height={40}></MainLogo>
               </a>
             </div>
-            <a href="tel:89119271787" className="header__phone">8 (911) 927-17-87</a>
+            <a href="tel:89119271787" className="header__phone">
+              <span className="header__phone-text">8 (911) 927-17-87</span>
+              <TelePhone className="header__phone-icon" />
+            </a>
           </div>
         </div>
       </header>
