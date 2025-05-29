@@ -30,13 +30,6 @@
   margin-bottom: 30px;
 }
 
-/* .footer__top {
-    display: grid;
-    grid-template-columns: 20% 20% 60%; 
-    grid-template-rows: auto;
-    grid-template-areas: "info empty links";
-  } */
-
 .footer__inner {
   display: flex;
   justify-content: space-between;
