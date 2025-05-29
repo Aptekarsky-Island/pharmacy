@@ -22,20 +22,20 @@ export default function Footer() {
             <h3>Помощь</h3>
             <ul>
               <li><Link to="/payment">Оплата</Link></li> 
-              <li><a href="#">Обмен и возврат</a></li>
+              <li><Link to="/refund">Обмен и возврат</Link></li>
             </ul>
           </div>
           <div className="footer__col">
             <h3>Клиентам</h3>
             <ul>
-              <li><a href="#">Политика конфиденциальности</a></li>
-              <li><a href="#">Пользовательское соглашение</a></li>
+              <li><Link to="/policy">Политика конфиденциальности</Link></li>
+              <li><Link to="/terms-of-use">Пользовательское соглашение</Link></li>
             </ul>
           </div>
           <div className="footer__col">
             <h3>О компании</h3>
             <ul>
-              <li><a href="#">Лицензии</a></li>
+              <li><Link to="/danchik">Лицензии</Link></li>
               <li><a href="#">Вакансии</a></li>
             </ul>
           </div>
