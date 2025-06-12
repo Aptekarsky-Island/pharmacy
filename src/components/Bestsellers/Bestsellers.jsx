@@ -9,6 +9,7 @@ import p1 from '../../assets/p1.png';
 import p2 from '../../assets/p2.png';
 import p3 from '../../assets/p3.png';
 import p4 from '../../assets/p4.png';
+import { useCart } from '../../pages/Cart/CartContext.jsx';
 
 const baseProducts = [
   { id: '1', img: p1, name: 'Gls Витамины для волос капсулы 370мг 60шт', price: '480 ₽' },
@@ -23,6 +24,9 @@ const products = Array(2).fill(baseProducts).flat();
 export default function Bestsellers() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [showAllProducts, setShowAllProducts] = useState(false);
+  
+  // Используем хук контекста корзины
+  const { addToCart } = useCart();
   
   useEffect(() => {
     const handleResize = () => {
@@ -46,6 +50,12 @@ export default function Bestsellers() {
     setShowAllProducts(true);
   };
   
+  // Обработчик нажатия на кнопку "Купить"
+  const handleBuyClick = (e, product) => {
+    e.preventDefault(); // Предотвращаем переход по ссылке
+    addToCart(product);
+  };
+  
   // Определяем параметры Swiper на основе размера экрана
   const swiperParams = {
     slidesPerView: isDesktopView ? 4 : 2,
@@ -62,7 +72,12 @@ export default function Bestsellers() {
         <div className="product-card__info">
           <h3 className="product-card__name">{product.name}</h3>
           <span className="product-card__price">{product.price}</span>
-          <button className="product-card__btn">Купить</button>
+          <button 
+            className="product-card__btn"
+            onClick={(e) => handleBuyClick(e, product)}
+          >
+            Купить
+          </button>
         </div>
       </Link>
     </div>
