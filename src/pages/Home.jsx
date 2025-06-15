@@ -1,18 +1,23 @@
 import './index.css'
-import Hero from '../components/Hero/Hero';
-import Bestsellers from '../components/Bestsellers/Bestsellers';
-import Discounts from '../components/Discounts/Discounts';
-import AlphabetFilter from '../components/AlphabetFilter/AlphabetFilter';
+import Discounts from '@components/Discounts/Discounts';
+import AlphabetFilter from '@components/AlphabetFilter/AlphabetFilter';
+import NavTools from '@components/NavTools/NavTools';
+import PromoBanner from '@components/PromoBanner/PromoBanner';
+import Categories from '@components/Categories/Categories';
 
-function Home() {
+export default function Home() {
   return (
     <>
-      <Hero/>
-      <Bestsellers />
+      <div className="home-content-wrapper">
+        <div className="home-content">
+          <NavTools isHomePage={true} />
+          <PromoBanner />
+          <Categories />
+        </div>
+      </div>
       <Discounts />
       <AlphabetFilter />
     </>
   );
 }
 
-export default Home;

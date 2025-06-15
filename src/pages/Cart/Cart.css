@@ -13,24 +13,24 @@
 }
 
 /* Исправление кликабельности кнопок в NavTools */
-.navtools__inner {
+/* .navtools__inner {
     pointer-events: auto !important;
 }
 
 .navtools__inner * {
     pointer-events: auto !important;
-}
-
+} */
+/* 
 .navbar__catalog__btn, 
 .navtools__search__btn, 
 .navtools__cart__btn {
     pointer-events: auto !important;
     z-index: 2 !important;
-}
-
+} */
+/* 
 .navtools__right {
     pointer-events: auto !important;
-}
+} */
 
 .cart__container {
     max-width: 1200px;

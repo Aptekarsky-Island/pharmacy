@@ -1,0 +1,29 @@
+.drug-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 именно 2 колонки */
+  gap: 0.5rem; /* расстояние между элементами */
+  padding: 0px 60px;
+  margin-bottom: 80px;
+  color: #1B58A6;
+}
+
+.drug-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: contents; /* Чтобы ul не ломал grid */
+}
+
+.drug-item {
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.drug-item:hover,
+.drug-item:focus {
+  color: #EC6325;
+  outline: none;
+}

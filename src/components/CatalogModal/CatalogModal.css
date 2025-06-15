@@ -1,0 +1,164 @@
+.catalog__modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.catalog__modal__container {
+    max-width: 1400px;
+    min-width: 365px;
+    width: 100%;
+    min-height: 729px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.catalog__modal__wrapper {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 135px 20px;
+}
+
+.catalog__modal__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-inline: 135px;
+    margin-bottom: 33px;
+}
+
+.catalog__active__btn {
+    height: 47px;
+    gap: 17px;
+    padding: 10px 24px;
+    background-color: #F97316;
+    border-radius: 100px;
+    overflow: hidden;
+    border: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.catalog__active__btn:hover {
+    background-color: rgba(249, 115, 22, 0.9);
+}
+
+.catalog__active__icon {
+    width: 12px;
+    height: 12px;
+    filter: brightness(1000%) saturate(0%);
+}
+
+.catalog__active__text {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: normal;
+    font-family: 'Nunito', Helvetica;
+    letter-spacing: 0;
+}
+
+.navtools__search__btn__catalog {
+  display: flex;
+  align-items: center;
+  background: #F4F6F9;
+  border: none;
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: none;
+  cursor: pointer;
+  height: 47px;
+  width: 123px;
+  transition: box-shadow 0.2s;
+  margin: 0;
+}
+
+
+.navtools__search__lupa {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.navtools__search__text {
+  color: #9FB2C5;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Wrapper для кнопки корзины и суммы */
+.navtools__cart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 47px;
+}
+
+/* Стили для пустой корзины (оранжевый фон) */
+.navtools__cart__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #EC6325;
+  border-radius: 50%;
+  border: none;
+  height: 47px;
+  width: 47px;
+  
+  transition: background-color 0.3s;
+}
+
+/* Стили для корзины с товарами (белый фон) */
+.navtools__cart__btn--filled {
+  background: #F4F6F9;
+}
+
+.header__cart__icon {
+  height: 21px;
+  width: 27px;
+}
+
+/* Стили для счетчика товаров в корзине */
+.navtools__cart-counter {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #1B58A6;
+  color: #F4F6F9;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили для отображения общей суммы корзины */
+.navtools__cart-total {
+  color: #1B58A6;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+}
