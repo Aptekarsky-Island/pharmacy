@@ -1,0 +1,72 @@
+.search__modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.search__modal__container {
+    max-width: 1400px;
+    min-width: 365px;
+    width: 100%;
+    min-height: 729px;
+    margin: 0 auto;
+    display: flex;
+    
+}
+
+.search__modal__wrapper {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 135px 20px;
+}
+
+.search__modal__noResults__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #9FB2C5;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    height: calc(100vh - 310px);
+    width: 100%;
+
+    scrollbar-width: none; /* Для Firefox */
+}
+
+.app-content::-webkit-scrollbar {
+  display: none; /* Скрывает scrollbar */
+}
+
+.app-result-count {
+    text-align: center;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.app-result-count span {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.app-results-section {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}

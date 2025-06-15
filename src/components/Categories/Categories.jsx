@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // ✅ Добавляем Link
 import './Categories.css';
+
+// Иконки
 import PillsIcon from '../../assets/icons/categories_icons/pills.svg?react';
 import SyringeIcon from '../../assets/icons/categories_icons/syringe.svg?react';
 import HygieneIcon from '../../assets/icons/categories_icons/hygiene.svg?react';
@@ -24,12 +27,25 @@ export default function Categories() {
     <section className="categories">
       <div className="categories__inner">
         {items.map(({ icon: Icon, label, isAdult }) => (
-          <div key={label} className="categories__card">
-            <div className="categories__icon">
-              {Icon ? <Icon className="categories__svg" /> : <span className="categories__icon-text">18+</span>}
+          <Link
+            key={label}
+            to="/catalog"
+            className="categories__card-link"
+            onClick={(e) => isAdult && e.preventDefault()} // ❌ блокируем переход для 18+ (опционально)
+          >
+            <div className="categories__card">
+              <div className="categories__icon">
+                {Icon ? (
+                  <Icon className="categories__svg" />
+                ) : (
+                  <span className="categories__icon-text">18+</span>
+                )}
+              </div>
+              <div className={`categories__label${isAdult ? ' categories__label--adult' : ''}`}>
+                {label}
+              </div>
             </div>
-            <div className={`categories__label${isAdult ? ' categories__label--adult' : ''}`}>{label}</div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

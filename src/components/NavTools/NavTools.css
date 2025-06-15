@@ -4,7 +4,7 @@
   right: 0;
   width: 100%;
   margin: 0;
-  pointer-events: none;
+  
 }
 
 .navtools {
@@ -26,8 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  pointer-events: auto;
-  padding: 0px;
+  padding: 22px 90px;
   margin-left: 85px;
   margin-right: 85px;
   margin-top: clamp(40px, 7vh, 87px);
@@ -42,7 +41,12 @@
 
 .navtools__right {
   gap: 20px;
-  pointer-events: auto;
+  
+}
+
+button:focus,
+button:active {
+  outline: none;
 }
 
 .navbar__catalog__btn {
@@ -56,18 +60,18 @@
   border: none;
   padding: 0;
   margin: 0;
-  pointer-events: auto;
+  
 }
 
 .navbar__catalog__icon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 }
 
-.navtools__search__btn {
+.navtools__search__btn__home {
   display: flex;
   align-items: center;
-  background: #fff;
+  background: #FFFFFF;
   border: none;
   border-radius: 24px;
   padding: 14px;
@@ -77,7 +81,21 @@
   width: 123px;
   transition: box-shadow 0.2s;
   margin: 0;
-  pointer-events: auto;
+}
+
+.navtools__search__btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: none;
+  cursor: pointer;
+  height: 47px;
+  width: 123px;
+  transition: box-shadow 0.2s;
+  margin: 0;
+  background-color: #FFFFFF !important;
 }
 
 .navtools__search__lupa {
@@ -114,7 +132,7 @@
   border: none;
   height: 47px;
   width: 47px;
-  pointer-events: auto;
+  
   transition: background-color 0.3s;
 }
 
@@ -162,7 +180,7 @@
   .navtools__home {
     position: static;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     width: 100%;
     background-color: #F4F6F9;
     border-radius: var(--border-radius-main) var(--border-radius-main) 0 0;
@@ -176,7 +194,7 @@
   .navtools__inner__home {
     max-height: 47px;
     margin: 0;
-    padding: 24px;
+    
   }
 
   .navtools__inner {

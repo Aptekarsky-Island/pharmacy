@@ -1,0 +1,263 @@
+.catalog-page {
+  margin-inline: 130px;
+}
+
+.breadcrumbs {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-family: "Nunito", sans-serif;
+}
+
+.breadcrumbs__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumbs__link {
+  color: #9fb2c5;
+  text-decoration: none;
+}
+
+.breadcrumbs__link:hover {
+  color: #1b58a6;
+}
+
+.breadcrumbs__separator {
+  color: #9fb2c5;
+}
+
+.breadcrumbs__current {
+  color: #9FB2C599;
+}
+
+.catalog-content {
+  padding-bottom: 3rem;
+}
+
+.catalog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1b58a6;
+}
+
+.sort-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sort-right-wrapper {
+  display: flex;
+  gap: 35px;
+}
+
+.sort-button {
+  color: #9fb2c5;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+}
+
+.sort-current-btn {
+  color: #1B58A6;
+}
+
+.catalog-grid {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.catalog-sidebar {
+  width: 200px;
+}
+
+.catalog-products {
+  flex: 1;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.product-card {
+  padding: 0.5rem;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-image-container {
+  height: 226px;
+  width: 100%;
+  background-color: #EDF1F6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.product-image {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.product-name {
+  font-size: 0.875rem;
+  color: #1b58a6;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+  width: 100%;
+}
+
+.product-price {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #1B58A6;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  width: 100%;
+}
+
+.product-buy-button {
+  width: 100%;
+  max-width: 235px;
+  height: 43px;
+  padding: 0;
+  margin: 0;
+  background-color: #DFE7F2;
+  color: #1b58a6;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.load-more-button {
+  width: 100%;
+  height: 43px;
+  background-color: transparent;
+  border: 1px solid #1B58A6;
+  color: #1B58A6;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-number {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.pagination-number--active {
+  background-color: #E7ECF2;
+  color: #1B58A6;
+}
+
+.pagination-number:hover {
+  background-color: #edf1f6;
+}
+
+.filter-section {
+  margin-bottom: 1.5rem;
+}
+
+.filter-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.875rem;
+  color: #222222;
+}
+
+.filter-count {
+  font-size: 0.75rem;
+  color: #9fb2c5;
+}
+
+.filter-option--active .filter-label {
+  font-weight: bold;
+  color: #1b58a6;
+}
+
+.filter-show-more {
+  font-size: 0.75rem;
+  color: #9fb2c5;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.price-range {
+  display: flex;
+  gap: 20px;
+}
+
+.price-range-input {
+  background-color: transparent;
+  border: 1px solid #B5C0CB80;
+  border-radius: 10px;
+  max-width: 90px;
+  height: 44px;
+  color: #9FB2C5;
+  padding-left: 10px;
+}
+
+.reset-button {
+  max-width: 141px;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #1B58A6;
+  color: #1b58a6;
+  background: none;
+  border-radius: 50px;
+  cursor: pointer;
+}

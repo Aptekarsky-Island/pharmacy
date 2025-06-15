@@ -3,9 +3,25 @@
   src: url('../../fonts/Nunito-Regular.ttf');
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   background: #f4f6f9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
 :root {
@@ -21,5 +37,33 @@ body {
   --transition: 0.3s ease;
   --border-radius-main: 30px;
   --border-radius-large: 48px;
-  --max-width-main: 1280px;
+  --max-width-main: 1400px;
+}
+
+.home-content-wrapper {
+  max-width: var(--max-width-main);
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 24px 20px;
+  position: relative;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+  .home-content-wrapper {
+    margin: 20px 0 0 0;
+    padding: 0;
+    background: #f4f6f9;
+  }
+  .hero__content {
+    padding: 14px;
+  }
 }
