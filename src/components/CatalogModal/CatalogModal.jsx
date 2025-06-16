@@ -17,7 +17,6 @@ export default function CatalogModal({ isOpen, setOpen }) {
     const { totalCount, totalPrice, dispatch } = useGlobalContext();
     const hasItems = totalCount > 0;
     const modalRef = useRef(null);
-    console.log('CatalogModal rendered', isOpen);
 
     useEffect(() => {
         const handleClickOutside = (event) => {

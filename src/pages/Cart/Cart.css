@@ -246,15 +246,24 @@
 
 @media (max-width: 768px) {
     .cart {
-        margin-top: 50px; /* Slightly less space on mobile */
+        margin-inline: 14px;
     }
 
     .cart__container {
+        margin-inline: 14px;
         padding: 20px;
+        height: 633px;
+    }
+
+    .cart__title {
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
     
     .cart__empty {
-        padding: 40px 10px;
+        padding: 0;
+        height: 100%;
     }
     
     .cart__content {

@@ -1,8 +1,10 @@
 .drug-grid {
+  max-width: 1400px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 👈 именно 2 колонки */
   gap: 0.5rem; /* расстояние между элементами */
   padding: 0px 60px;
+  margin: 0 auto;
   margin-bottom: 80px;
   color: #1B58A6;
 }
@@ -26,4 +28,12 @@
 .drug-item:focus {
   color: #EC6325;
   outline: none;
+}
+
+@media (max-width: 400px) {
+  .drug-grid{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }

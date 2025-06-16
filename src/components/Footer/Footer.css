@@ -153,8 +153,7 @@
   .footer {
     min-width: 0;
     margin: 14px;
-
-    width: calc(100% - 14px);
+    max-width: 365px;
     margin-right: 20px;
 
   }

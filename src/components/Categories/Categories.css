@@ -4,7 +4,6 @@
 }
 
 .categories__inner {
-  
   margin: 0 70px;
   display: flex;
   flex-wrap: wrap;
@@ -19,6 +18,10 @@
   background: transparent;
   cursor: pointer;
   transition: transform #ec6325;
+}
+
+.categories__card-link {
+  text-decoration: none;
 }
 
 .categories__icon {

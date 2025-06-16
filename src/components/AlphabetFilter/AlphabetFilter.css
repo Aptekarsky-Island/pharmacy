@@ -110,7 +110,9 @@
 
 @media (max-width: 500px) {
   .alphabet {
-    padding: 40px 10px;
+    margin: 40px 28px;
+    width: 365px;
+    padding: 0;
   }
 
   .alphabet__grid {
@@ -120,5 +122,6 @@
   .alphabet__btn {
     padding: 10px 20px;
     font-size: 1rem;
+    width: 116px;
   }
 }

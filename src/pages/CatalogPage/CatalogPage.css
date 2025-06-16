@@ -96,6 +96,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-image-container {
@@ -260,4 +261,47 @@
   background: none;
   border-radius: 50px;
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .breadcrumbs {
+    display: none;
+  }
+
+  .catalog-page {
+    padding-inline: 14px;
+    margin: 0;
+  }
+
+  .catalog-title {
+    font-size: 1rem;
+  }
+
+  .catalog-grid {
+    flex-direction: column;
+  }
+
+  .catalog-sidebar {
+    width: 100%;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-options {
+    width: 275px;
+    margin-right: 20px;
+  }
+
+  .filter-title {
+    width: 295px;
+  }
+
+  .price-range {
+    width: 275px;
+    justify-content: space-between;
+  }
 }

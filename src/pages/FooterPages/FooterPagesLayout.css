@@ -1,11 +1,11 @@
 .footer__page__content__container {
-  margin: 0 20px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 1440px;
-  padding: 10px 10% 70px;
+  max-width: 1350px;
+  padding: 10px 50px 70px;
   background-color: var(--promo-gradient);
   border-radius: var(--border-radius-large);
 }

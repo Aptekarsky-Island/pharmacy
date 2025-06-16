@@ -59,9 +59,10 @@ body {
 
 @media (max-width: 960px) {
   .home-content-wrapper {
-    margin: 20px 0 0 0;
+    margin: 20px 14px 0 14px;
     padding: 0;
     background: #f4f6f9;
+    max-width: 365px;
   }
   .hero__content {
     padding: 14px;
