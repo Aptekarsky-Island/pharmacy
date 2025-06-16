@@ -60,7 +60,6 @@
   position: static;
   }
   .header__container{
-    max-height: 30px;
     padding: 60px 0px 10px 0px;
   }
   .header__nav {

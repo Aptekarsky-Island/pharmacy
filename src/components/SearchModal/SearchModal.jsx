@@ -7,7 +7,7 @@ import useSearch from '@hooks/useSearch';
 
 const modalSearchRoot = document.getElementById('modal-search');
 
-const SearchModal = ({ isOpen, setOpen }) => {
+export default function SearchModal ({ isOpen, setOpen }) {
     const { query, setQuery, filteredProducts, isLoading, hasQuery, hasResults } = useSearch();
     const modalRef = useRef(null);
 
@@ -78,5 +78,3 @@ const SearchModal = ({ isOpen, setOpen }) => {
         modalSearchRoot
     );
 };
-
-export default SearchModal;

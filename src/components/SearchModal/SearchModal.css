@@ -42,6 +42,7 @@
 .app-content {
     display: flex;
     flex-direction: column;
+    max-width: 1300px;
     gap: 1.5rem;
     overflow-y: auto;
     height: calc(100vh - 310px);

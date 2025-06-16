@@ -2,7 +2,7 @@ import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="product-card">
+    <div className="product-card-modal">
       <div className="product-container">
         <div className="product-info">
           <h3 className="product-title">{product.name}</h3>

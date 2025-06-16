@@ -187,14 +187,16 @@ button:active {
   }
 
   .navtools {
-    margin-top: 100px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
   }
   
   .navtools__inner__home {
     max-height: 47px;
     margin: 0;
-    
+    padding: 0;
   }
 
   .navtools__inner {

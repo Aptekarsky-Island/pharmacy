@@ -116,11 +116,6 @@
   }
   
   @media (max-width: 900px) {
-    .discounts {
-      max-width: 100%;
-      margin: 0 0 24px 0;
-      padding: 24px 0 24px 0;
-    }
     .discounts__inner {
       flex-direction: column;
       align-items: flex-start;
@@ -142,21 +137,36 @@
   
   @media (max-width: 600px) {
     .discounts {
-      padding: 12px 0 12px 0;
-      border-radius: 12px;
+      padding: 0;
+      border-radius: 42px;
+      width: 365px;
+    }
+    .discounts__info {
+      margin-top: 80px;
+      margin-inline: 34px;
+      padding: 0;
+      gap: 0;
     }
     .discounts__title {
       font-size: 1.3rem;
+      margin: 0;
     }
     .discounts__subtitle {
       font-size: 0.95rem;
+      margin: 0;
+      padding: 0;
     }
     .discounts__desc {
+      margin-top: 40px;
       font-size: 0.95rem;
     }
     .discounts__svg {
       width: 300px;
       height: auto;
+      border-radius: 42px;
+    }
+    .discounts__graphic {
+      border-radius: 42px;
     }
   }
   
